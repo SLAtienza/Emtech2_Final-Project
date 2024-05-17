@@ -14,7 +14,7 @@ def import_and_predict(image_data, model):
     image = image.convert('RGB')
     img = np.asarray(image)
     img = img / 255.0 
-    img_reshape = np.reshape(img, (1, 64, 64, 3))
+    img_reshape = np.reshape(img, (1, 128, 128, 3))
     prediction = model.predict(img_reshape)
     return prediction
 
